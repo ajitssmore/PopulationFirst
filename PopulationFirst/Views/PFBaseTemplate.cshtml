@@ -1,0 +1,170 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+@* the fun starts here *@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Full Slider - Start Bootstrap Template</title>
+    <!-- Bootstrap core CSS -->
+
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/css/full-slider.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <!-- <link type="text/css" rel="stylesheet" href="../widget/css/rcarousel.css" /> -->
+
+
+</head>
+<body>
+    <div class="logo text-center col-sm-12 fixed-top"><a href="index.html"><img class="img-fluid" src="images/logo.jpg" alt="logo"></a></div>
+    <div class="clearfix"></div>
+    <!-- Navigation -->
+    <nav id="mynav" class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Start Bootstrap</a> -->
+            <button class="navbar-toggler float-md-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            About us
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Amchi
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Laadli
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Event</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item btn-red">
+                        <a class="nav-link" href="#">Donate Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="py-2 mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 h-100 text-lg-left mb-sm-2 my-auto mx-sm-auto contact-info">
+                    <div class="mail float-left"><a href="#"><i class="fa fa-envelope pr-2"></i> info@populationfirst.org </a></div>
+                    <div class="phone float-left pl-4"><a href="#"><i class="fa fa-volume-control-phone pr-2"></i>  91679 02776 </a></div>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto mt-sm-3">
+                    <ul class="list-inline mb-0 mt-0">
+                        <li class="list-inline-item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 h-100 text-center text-lg-right my-auto mt-sm-3">
+                    <ul class="list-inline social-buttons mb-0 mt-0">
+                        <li class="list-inline-item">
+                            <a class="tw" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="fb" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="youtube" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="col-lg-6 text-muted text-center small mt-2 mx-auto">Population First, Ratan Manzil, Ground floor, 64, Wodehouse Road, Colaba, Opp. Hotel Happy Home, Near Charaghdin Shirt Shop, Mumbai [Bombay], Pin : 400005, India. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-1.7.1.js"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.rcarousel.js"></script> -->
+    <!--  Navigation After scroll color -->
+    <script>
+		// When the user scrolls down 20px from the top of the document, slide down the navbar
+		// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+		window.onscroll = function() {scrollFunction()};
+		window.onload = function() {scrollFunction()};
+		function scrollFunction() {
+		  if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
+		      document.getElementById("mynav").style.backgroundColor ="rgba(0, 0, 0, 1)";
+		  } else {
+		     // document.getElementById("mynav").style.opacity="0.5";
+		     // document.getElementById("mynav").style.background="#111";
+		     document.getElementById("mynav").style.backgroundColor ="rgba(0, 0, 0, 0.7)";
+		  }
+		}
+
+    </script>
+
+</body>
+</html>
+
+

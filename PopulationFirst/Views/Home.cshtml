@@ -1,0 +1,249 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;   
+@{
+	Layout = "PFBaseTemplate.cshtml";
+}
+
+<div>
+   @Html.Partial("ImageCarouselListPage") 
+</div>
+
+<div class="clearfix"></div>
+
+<div>
+    @Html.Partial("CurrentProjectPage")
+</div>
+
+<div class="clearfix"></div>
+<!-- Events -->
+
+<!-- Who we are -->
+<section class="who-we-are d-block mx-auto">
+    <div class="container">
+        <div class="para">
+            <div class="section-heading text-center">Who we are <p>An NGO working on population and health issues</p></div>
+            <div class="py-4 text-center">
+                Population First  is a communications and advocacy initiative for  health and population issues from
+                a gender and social development perspective. It’s main objective is to help reduce gender imbalances in
+                the population and work towards gender sensitive and social development
+                oriented health and population programmes.
+            </div>
+            <button type="button" class="btn btn-default who-btn d-block mx-auto">Know More</button>
+        </div>
+    </div>
+</section>
+
+<!-------------------------------------- our-projects -------------------------------------->
+<div class="our-projects col-lg-8 col-sm-12 my-5 d-block mx-auto">
+    <div class="container">
+        <div class="section-heading text-center">Our Projects</div>
+        <div class="row text-center mt-5">
+            <div class="col-md-6">
+                <div class="view overlay zoom">
+                    <img src="images/Laadli.jpg" class="img-fluid " alt="smaple image">
+                    <div class="mask flex-center rgba-red-strong">
+                        <p class="white-text text-center clearfix px-4">
+                            <span class="first-word">Laadli</span> is Population First’s flagship
+                            campaign which works to promote a positive image of the girl child tocounter her undervaluing in society and has ‘Celebrate Her Life’ as its tagline.<br>
+                            <button type="button" class="btn btn-danger d-block mx-auto mt-4">Know More</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-xs-4 ">
+                <div class="view overlay zoom">
+                    <img src="images/Amchi.jpg" class="img-fluid " alt="smaple image">
+                    <div class="mask flex-center rgba-red-strong">
+                        <p class="white-text text-center clearfix px-4">
+                            <span class="first-word">AMCHI</span>, which in Marathi means “Ours” is a community empowerment project that works for better quality, accountability and transparency in social development services. <br>
+                            <button type="button" class="btn btn-danger d-block mx-auto mt-4">Know More</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------- Our Media Coverage ----------------------------------->
+<div class="media-coverage my-5">
+    <div class="container-fluid">
+        <div class="section-heading text-center">Our Media Coverage</div>
+        <div class="row text-center mt-5">
+            <div class="media-banner">
+                <div class="btn-media mr-5 py-4"><a href="#">View All <i class="fa fa-angle-right"></i></a></div>
+                <div class="media-text py-2">Influencing the influencers: A decade on,the Laadli campaign labours on.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------------- Blog section -------------------------------------->
+<div class="blog-section my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="view overlay">
+                    <img src="images/ASCI.jpg" alt="ASCI" class="img-fluid">
+                    <div class="blog-title py-3 text-center">
+                        ASCI REPORT
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="view overlay">
+                    <img src="images/Rectangle.png" alt="ASCI" class="img-fluid">
+                    <div class="blog-title py-3 text-center">
+                        How Long? How Often?
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4 subscribe">
+                <div class="view overlay">
+                    <img src="images/eventbox.png" alt="eventbox" class="img-fluid">
+
+                    <form class="scr-form px-5 py-5 text-center" action="/action_page.php" style="max-width:500px;margin:auto">
+                        <p>Subscribe To Our Newsletter</p>
+                        <div class="input-container py-2">
+                            <input class="input-field" type="text" placeholder="Email Address" name="Email">
+                            <i class="fa fa-paper-plane icon"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------- Sensitive Media ----------------------------------------------------->
+
+<div class="sensitive-media my-5 py-5">
+    <div class="container">
+        <div class="section-heading text-center">Gender Sensitive Media</div>
+        <div class="row text-center mt-4">
+            <div class="card mt-2 col-md-12">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+                    <div class="w-100 carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="carousel-caption py-4">
+                                <div class="row">
+                                    <div class="col-sm-3 media-iamge">
+                                        <img src="images/colors.jpg" alt="" class="img-fluid img-thumbnail">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3>Mumbaikars mark Laadli Day with a hard-hitting play against gender based violence</h3>
+                                        <small>TNN | Updated: Jun 12, 2018, 18:58 IST</small>
+                                        <!-- <small class="smallest mute">- willi</small> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption py-4">
+                                <div class="row">
+                                    <div class="col-sm-3 media-iamge">
+                                        <img src="images/colors.jpg" alt="" class="img-fluid ">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3>Mumbaikars mark Laadli Day with a hard-hitting play against gender based violence</h3>
+                                        <small>TNN | Updated: Jun 12, 2018, 18:58 IST</small>
+                                        <!-- <small class="smallest mute">- willi</small> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-arrows col-md-12 mx-auto">
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  partners  -->
+<section class="partners py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="images/NCPA.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="images/colors.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="images/HSBC.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="images/ASHOK-Group.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+****************************************
+
+<div id="myCarousel" class="carousel slide " data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item carousel-item active">
+                <div class="frame col-md-3 float-left">
+                    <div class="row">
+                        <img src="images/BCText_for website.jpg" alt="website-details" />
+                    </div>
+                </div>
+                <div class="text col-md-9 float-left text-left">
+                    <div class="event-heading"> 2nd Edition South Asia Laadli Media & Advertising Awards for Gender Sentivity</div>
+                    <p>Last Date For Entries: <i class="fa fa-calendar m-2"></i> <span>10:06:18</span></p>
+                </div>
+            </div>
+            <div class="item carousel-item">
+                <div class="frame col-md-3 float-left">
+                    <div class="row">
+                        <img src="images/BCText_for website.jpg" alt="website-details" />
+                    </div>
+                </div>
+                <div class="text col-md-9 float-left text-left">
+                    <div class="event-heading"> 2nd Edition South Asia Laadli Media & Advertising Awards for Gender Sentivity</div>
+                    <p>Last Date For Entries: <i class="fa fa-calendar m-2"></i> <span>10:06:18</span></p>
+                </div>
+            </div>
+            <div class="item carousel-item">
+                <div class="frame col-md-3 float-left">
+                    <div class="row">
+                        <img src="images/BCText_for website.jpg" alt="website-details" />
+                    </div>
+                </div>
+                <div class="text col-md-9 float-left text-left">
+                    <div class="event-heading"> 2nd Edition South Asia Laadli Media & Advertising Awards for Gender Sentivity</div>
+                    <p>Last Date For Entries: <i class="fa fa-calendar m-2"></i> <span>10:06:18</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+

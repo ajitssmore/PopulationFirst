@@ -1,0 +1,146 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using System.Collections;
+@{
+    Layout = null;
+    var parent = Model.AncestorOrSelf(1);
+    List<int> nodeIds = new List<int>();
+    foreach (var page in parent.Children)
+    {
+        if (page.DocumentTypeAlias == "currentProjectList")
+        {
+            foreach (var child in page.Children)
+            {
+                nodeIds.Add(child.Id);
+            }
+        }
+    }
+    List<IPublishedContent> slides = new List<IPublishedContent>();
+    foreach (var nodeId in nodeIds)
+    {
+        if (nodeId != null)
+        {
+            var publishedContent = Umbraco.NiceUrl(Convert.ToInt32(nodeId));
+            if (!String.IsNullOrEmpty(publishedContent) && publishedContent != "#")
+            {
+                slides.Add(Umbraco.TypedContent(nodeId));
+            }
+        }
+    }
+
+<section class="up-event">
+        <div class="container">
+            <div class="d-flex">
+                <ul class="nav nav-pills nav-tab-headinf mx-auto" role="tablist">
+                    @{int i = 0;}
+                    @{
+                        foreach (var slide in slides)
+                        {
+                            if (slide != null)
+                            {
+                                i++;
+                                var active = i == 1 ? "active" : "";
+
+                                <li class="nav-item">
+                                    <a class="nav-link @active" data-toggle="pill" href="#@Html.Raw(slide.GetPropertyValue("sectionhref"))">@Html.Raw(slide.GetPropertyValue("sectionName"))</a>
+                                </li>
+
+                            }
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="tab-content">
+                @{int j = 0;}
+                @{
+                    foreach (var slide in slides)
+                    {
+                        if (slide != null)
+                        {
+                            j++;
+                            var parentActive = j == 1 ? "active" : "";
+                            <div id="@Html.Raw(slide.GetPropertyValue("sectionhref"))" class="container tab-pane @parentActive">
+                                <br />
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="Laadlis col-lg-8 col-sm-12 col-center m-auto">
+                                            @{ 
+                                                List<int> childnodeids = new List<int>();
+                                                foreach (var childpage in parent.Children)
+                                                {
+                                                    if (childpage.DocumentTypeAlias == "projectCarouselList")
+                                                    {
+                                                        foreach (var childnode in childpage.Children)
+                                                        {
+                                                            childnodeids.Add(childnode.Id);
+                                                        }
+                                                    }
+                                                }
+                                                List<IPublishedContent> childslides = new List<IPublishedContent>();
+                                                foreach (var childnodeid in childnodeids)
+                                                {
+                                                    if (childnodeid != null)
+                                                    {
+                                                        var publishedcontent = Umbraco.NiceUrl(Convert.ToInt32(childnodeid));
+                                                        if (!string.IsNullOrEmpty(publishedcontent) && publishedcontent != "#")
+                                                        {
+                                                            childslides.Add(Umbraco.TypedContent(childnodeid));
+                                                        }
+                                                    }
+                                                }
+                                            }           
+                                            <div id="myCarousel" class="carousel slide " data-ride="carousel">
+                                                @{int k = 0;}
+                                                <ol class="carousel-indicators">
+                                                        @{
+                                                            foreach (var ChildSlide in childslides)
+                                                            {
+                                                                var Childactive = k == 0 ? "active" : "";
+                                                                <li data-target="#carouselExampleIndicators" data-slide-to='k' class="@Childactive"></li>
+                                                                k++;
+                                                            }
+                                                        }
+                                                </ol>
+                                                <div class="carousel-inner">
+                                                    @{int p = 0;}
+                                                        @{
+                                                            foreach (var ChildSlidenew in childslides)
+                                                            {
+                                                                if (ChildSlidenew != null && ChildSlidenew["ProjectName"].ToString() == @Html.Raw(slide.GetPropertyValue("sectionName")).ToString())
+                                                                {
+                                                                    p++;
+                                                                    var imageChildactive = p == 1 ? "active" : "";
+                                                                    <div class="item carousel-item @imageChildactive">
+                                                                        <div class="frame col-md-3 float-left">
+                                                                            <div class="row">
+                                                                                <img src="@Umbraco.Media(ChildSlidenew.GetPropertyValue("projectImage").ToString()).Url" alt="website-details" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text col-md-9 float-left text-left">
+                                                                            <div class="event-heading"> @Html.Raw(ChildSlidenew.GetPropertyValue("ProjectImageDescription"))</div>
+                                                                            <p>Last Date For Entries: <i class="fa fa-calendar m-2"></i> <span>@Html.Raw(ChildSlidenew.GetPropertyValue("dateEntries"))</span></p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                }
+                                                            }
+                                                        }
+
+                                                </div>    
+
+
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        }
+                    }
+                 }
+             </div>
+        </div>
+</section>
+
+
+
+}

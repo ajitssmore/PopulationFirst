@@ -1,0 +1,94 @@
+@media(max-width: 1320px){
+    .logo {
+        background-color: #fff;
+        height: 100px;
+    }
+    nav.navbar.fixed-top.nav-bg {
+        background-color: #111;
+            margin-top: 100px;
+    }
+}
+@media (max-width:1199px){
+	.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+}
+li.nav-item {
+    padding: 0 1.2rem;
+}
+ul.social-buttons li a {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 38px;
+}
+.phone.pl-4 {
+    padding-left: 0.2rem!important;
+}
+}
+@media (max-width:991px){
+
+	nav.navbar.fixed-top.nav-bg{
+	    opacity: 1 !important;
+        background-color: #343a40!important;
+	}
+/*	.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,1);
+    border-color: rgba(0,0,0,1);
+    background: #000;
+}*/
+.subscribe{
+	margin-top: 30px;
+}
+.subscribe img{
+	max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+.contact-info{
+	text-align: center;
+}
+.phone.pl-4 {
+    padding-left: 1.2rem!important;
+}
+#slide01 > .text, #slide02 > .text, #slide03 > .text, #slide04 > .text {
+    position: absolute;
+    left: 210px;
+}
+}
+@media (max-width:850px){
+    .logo {
+        height: 80px;
+    }
+    nav.navbar.fixed-top.nav-bg {
+        background-color: #111;
+        margin-top: 80px;
+    }
+}
+@media(max-width: 767px){
+    .view.overlay{
+        margin-top: 30px;
+    }
+    nav.navbar.fixed-top.nav-bg {
+        margin-top: 9%;
+    }
+    header .carousel-caption {
+    display: block !important;
+}
+.zoom img, .view.overlay img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 250px
+}
+.carousel-caption h3 {
+    font-size: 1.2rem;
+}
+.card .carousel-item {
+    height: 140px;
+    min-height: 140px;
+}
+}
+@media(max-width: 575px){
+
+    }
