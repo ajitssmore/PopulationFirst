@@ -27,15 +27,15 @@
         }
     }
 
- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+ <div id="firstcarouselExampleIndicators" class="carousel slide" data-ride="carousel">
      @{int j = 0;}   
      <ol class="carousel-indicators">
             @{
                 foreach (var slide in slides)
                 {
+                    var abcd = j == 0 ? "active" : "";
+                    <li data-target="#firstcarouselExampleIndicators" data-slide-to='@j'></li>
                     j++;
-                    var abcd = j == 1 ? "abcd" : "";
-                    <li data-target="#carouselExampleIndicators" data-slide-to='abcd'></li>
                 }
 
             }
@@ -70,11 +70,11 @@
                  }
             }
          </div>
-         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+         <a class="carousel-control-prev" href="#firstcarouselExampleIndicators" role="button" data-slide="prev">
              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
              <span class="sr-only">Previous</span>
          </a>
-         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+         <a class="carousel-control-next" href="#firstcarouselExampleIndicators" role="button" data-slide="next">
              <span class="carousel-control-next-icon" aria-hidden="true"></span>
              <span class="sr-only">Next</span>
          </a>

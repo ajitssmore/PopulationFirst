@@ -92,12 +92,16 @@
                                                 @{int k = 0;}
                                                 <ol class="carousel-indicators">
                                                         @{
-                                                            foreach (var ChildSlide in childslides)
+                                                            @*foreach (var ChildSlide in childslides)
                                                             {
-                                                                var Childactive = k == 0 ? "active" : "";
-                                                                <li data-target="#carouselExampleIndicators" data-slide-to='k' class="@Childactive"></li>
-                                                                k++;
-                                                            }
+                                                                if (ChildSlide != null && ChildSlide["ProjectName"].ToString() == @Html.Raw(slide.GetPropertyValue("sectionName")).ToString())
+                                                                {
+                                                                    var Childactive = k == 0 ? "active" : "";
+                                                                        <li data-target="#carouselExampleIndicators" data-slide-to='k' class="@Childactive"></li>
+                                                                    k++;
+                                                                }
+
+                                                            }*@
                                                         }
                                                 </ol>
                                                 <div class="carousel-inner">
@@ -107,8 +111,7 @@
                                                             {
                                                                 if (ChildSlidenew != null && ChildSlidenew["ProjectName"].ToString() == @Html.Raw(slide.GetPropertyValue("sectionName")).ToString())
                                                                 {
-                                                                    p++;
-                                                                    var imageChildactive = p == 1 ? "active" : "";
+                                                                    var imageChildactive = p == 0 ? "active" : "";
                                                                     <div class="item carousel-item @imageChildactive">
                                                                         <div class="frame col-md-3 float-left">
                                                                             <div class="row">
@@ -120,7 +123,7 @@
                                                                             <p>Last Date For Entries: <i class="fa fa-calendar m-2"></i> <span>@Html.Raw(ChildSlidenew.GetPropertyValue("dateEntries"))</span></p>
                                                                         </div>
                                                                     </div>
-
+                                                                    p++;
                                                                 }
                                                             }
                                                         }
